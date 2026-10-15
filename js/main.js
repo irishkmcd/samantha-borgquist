@@ -28,7 +28,7 @@ form.addEventListener("submit", async (event) => {
   status.className = "form-status";
 
   try {
-    const response = await fetch("https://formsubmit.co/ajax/sborgquist21@gmail.com", {
+    const response = await fetch("https://formsubmit.co/ajax/sborgquist@gmail.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
