@@ -473,8 +473,13 @@ h1 {
   line-height: 1.02;
 }
 
-.contact-copy p:last-child {
+.contact-copy p:last-of-type {
   margin-bottom: 0;
+}
+
+.contact-portrait {
+  width: min(100%, 15.5rem);
+  margin-top: 1.75rem;
 }
 
 .place {
