@@ -1,5 +1,3 @@
-drawSkillRings();
-
 const form = document.querySelector("#contact-form");
 const status = document.querySelector("#form-status");
 
@@ -57,33 +55,6 @@ form.addEventListener("submit", async (event) => {
     button.textContent = "Send message";
   }
 });
-
-function drawSkillRings() {
-  const radius = 46;
-  const circumference = 2 * Math.PI * radius;
-
-  document.querySelectorAll(".ring-card").forEach((card) => {
-    const skills = card.querySelectorAll("li");
-    const count = skills.length;
-    const gap = count === 1 ? 22 : count >= 8 ? 8 : 10;
-    const segment = (circumference - count * gap) / count;
-    const group = card.querySelector(".segments");
-    const colors = ["#152238", "#9a7848"];
-
-    skills.forEach((_, index) => {
-      const arc = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-      arc.setAttribute("cx", "60");
-      arc.setAttribute("cy", "60");
-      arc.setAttribute("r", String(radius));
-      arc.setAttribute("fill", "none");
-      arc.setAttribute("stroke", colors[index % 2]);
-      arc.setAttribute("stroke-width", "11");
-      arc.setAttribute("stroke-dasharray", `${segment} ${circumference - segment}`);
-      arc.setAttribute("stroke-dashoffset", String(-(index * (segment + gap))));
-      group.appendChild(arc);
-    });
-  });
-}
 
 function showSuccess() {
   form.reset();
