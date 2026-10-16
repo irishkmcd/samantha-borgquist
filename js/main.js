@@ -86,6 +86,7 @@ function drawSkillRings() {
 }
 
 function showSuccess() {
+  form.reset();
   form.hidden = true;
   status.className = "form-status is-success";
   status.textContent = "Message sent. Samantha will get back to you.";
